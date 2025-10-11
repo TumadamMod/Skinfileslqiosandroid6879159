@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tải Files Skin</title>
+<style>
+:root{
+  --bg:#111827;
+  --card:#1f2937;
+  --text:#f9fafb;
+  --muted:#9ca3af;
+  --accent:#6366f1;
+  --accent2:#3b82f6;
+  --radius:14px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+body{
+  margin:0; padding:20px;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{max-width:900px;margin:auto}
+
+/* Hiệu ứng viền 7 màu */
+.rainbow-border{
+  position:relative;
+  border-radius:var(--radius);
+  padding:3px;
+  background:linear-gradient(270deg,
+    #ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8f00ff,#ff0000);
+  background-size:400% 400%;
+  animation:rainbow 8s linear infinite;
+}
+.rainbow-border > .inner{
+  background:var(--card);
+  border-radius:calc(var(--radius) - 2px);
+  padding:16px;
+  text-align:center;
+}
+@keyframes rainbow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+h1{margin:0;font-size:24px;font-weight:700}
+h1 span{color:#fef3c7;text-shadow:0 0 8px #f59e0b}
+h2{font-size:19px;margin:0 0 10px;text-align:left}
+p{margin:6px 0}
+
+section{
+  margin-top:20px;
+}
+.section-box{
+  position:relative;
+  border-radius:var(--radius);
+  padding:3px;
+  background:linear-gradient(270deg,
+    #ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8f00ff,#ff0000);
+  background-size:400% 400%;
+  animation:rainbow 8s linear infinite;
+  box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+.section-box .content{
+  background:var(--card);
+  border-radius:calc(var(--radius) - 2px);
+  padding:16px;
+}
+
+.file{
+  background:#111827;
+  border-radius:var(--radius);
+  padding:14px;
+  margin-top:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.25s;
+  box-shadow:0 0 6px rgba(99,102,241,0.3);
+}
+.file:hover{
+  background:#1e293b;
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 0 12px rgba(99,102,241,0.5);
+}
+.file-info h3{margin:0;font-size:15px}
+.file-info p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.file-actions button{
+  background:var(--accent2);
+  border:0;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.25s;
+}
+.file-actions button:hover{
+  background:var(--accent);
+  box-shadow:0 0 8px var(--accent);
+}
+
+/* Toggle */
+.toggle-info{
+  display:block;
+  width:100%;
+  padding:10px;
+  border:0;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  border-radius:var(--radius);
+  cursor:pointer;
+  transition:.25s;
+}
+.toggle-info:hover{
+  background:var(--accent2);
+  box-shadow:0 0 8px var(--accent2);
+}
+#info-content{
+  display:none;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+  text-align:left;
+}
+
+/* Popup */
+#popup{
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+#popup .box{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  max-width:300px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.6);
+}
+#popup h3{margin-top:0}
+#popup button{
+  margin:10px;
+  padding:8px 12px;
+  border-radius:8px;
+  border:0;
+  font-weight:600;
+  cursor:pointer;
+}
+#popup .ok{background:var(--accent2);color:white}
+#popup .ok:hover{background:var(--accent)}
+#popup .cancel{background:#374151;color:white}
+#popup .cancel:hover{background:#4b5563}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Tiêu đề với viền 7 màu -->
+  <div class="rainbow-border">
+    <div class="inner">
+      <h1>📁 <span>Pack 55 Skin LQ 11/10</span></h1>
+      <p>Hỗ trợ iOS • Android </p>
+    </div>
+  </div>
+
+  <!-- Phần 1 -->
+  <section class="section-box">
+    <div class="content">
+      <h2>Phần 1: Mod Skin Bình Thường (iOS + Android)</h2>
+      <div class="file">
+        <div class="file-info">
+          <h3>Skin Pack v1.0</h3>
+          <p>Tương thích iOS & Android • 45MB</p>
+        </div>
+        <div class="file-actions">
+          <button onclick="confirmDownload('https://www.mediafire.com/file/jo5wjvqaxos3ujt/Pack+55+Skin+LQ+11-10.zip/file')">Tải</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 2 -->
+  <section class="section-box">
+    <div class="content">
+      <h2>Phần 2: iOS (Máy Mạnh)</h2>
+      <div class="file">
+        <div class="file-info">
+          <h3>Dành Cho IOS(Dán Files)</h3>
+          <p>Tương thích Cho iOS 100MB</p>
+        </div>
+        <div class="file-actions">
+          <button onclick="confirmDownload('https://www.mediafire.com/file/epcadq71xecm0sh/[IOS+Dán+Files]55+Skin+LQ[MAYMANH].zip/file')">Tải</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 3 -->
+  <section class="section-box">
+    <div class="content">
+      <h2>Phần 3: iOS (Máy Yếu)</h2>
+      <div class="file">
+        <div class="file-info">
+          <h3>Dành Cho IOS(Dán Files)</h3>
+          <p>Tương thích Cho iOS 100MB</p>
+        </div>
+        <div class="file-actions">
+          <button onclick="confirmDownload('https://www.mediafire.com/file/epb2vq4oye4qgdq/[IOS+Dán+Files]55+Skin+LQ[MAYYEU].zip/file')">Tải</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thông tin -->
+  <section class="section-box">
+    <div class="content">
+      <button class="toggle-info" onclick="toggleInfo()">Ẩn/Hiện • Lưu Ý</button>
+      <div id="info-content">
+        <p>📌 Lưu ý :</p>
+        <ul>
+          <li>•	 Nhớ Xoá Mod Cũ Trc Khi SD MOD Mới,Đối Với iOS Không Menu Hoặc Android Không Menu Thì Vô Cài Đặt Game Chọn Khôi Phục Nhanh</li>
+          <li>•	Mặc Mặc Định Khi Chơi Hoặc Bậc A Không Có Hiệu Ứng</li>
+          <li>•	Đối Với Files Máy Yếu Bắt Buộc Mặc Mặc Định Trước Khi Chơi</li>
+          <li>•	 Vui Lòng Đang Dùng Files Không Thoát Game Vô Lại (Khi Đang Chơi) Tránh Xung Đột Files Dẫn Đến Lỗi.</li>
+          <li>•	Không SD Unlock Skin Khi Mod Với Files(Nếu Có)</li>
+          <li>•	Hạn Chế Chơi Liên Tiếp VD Chơi 2-3 Trận Thì Phải Thoát Game Ra Vô Lại Tránh Lỗi Files Dẫn Đến Lỗi Trận.</li>
+          <li>💡Mẹo
+•	Nếu Dùng Unlock Nút Với Thông Báo Sẽ Vẫn Hiện(Nếu Có)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Popup xác nhận -->
+<div id="popup">
+  <div class="box">
+    <h3>Xác nhận tải</h3>
+    <p>Bạn có muốn tải file này không?</p>
+    <button class="ok" id="okBtn">Đồng ý</button>
+    <button class="cancel" onclick="closePopup()">Huỷ</button>
+  </div>
+</div>
+
+<script>
+let currentLink = null;
+
+function confirmDownload(link){
+  currentLink = link;
+  document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+  currentLink = null;
+}
+document.getElementById("okBtn").addEventListener("click", ()=>{
+  if(currentLink){
+    window.location.href = currentLink;
+  }
+  closePopup();
+});
+function toggleInfo(){
+  const box=document.getElementById("info-content");
+  box.style.display = box.style.display==="block" ? "none":"block";
+}
+</script>
+</body>
+</html>
